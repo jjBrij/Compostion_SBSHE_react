@@ -1,0 +1,22 @@
+.site-footer {
+  background-color: var(--brand-navy);
+  color: rgb(203 213 225);
+}
+
+.footer-heading {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.footer-link {
+  color: rgb(203 213 225);
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--brand-orange);
+}

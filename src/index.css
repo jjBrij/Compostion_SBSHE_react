@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-red: #e11d2c;
+  --brand-orange: #f97316;
+  --brand-blue: #2563eb;
+  --brand-navy: #0b1220;
+  --brand-charcoal: #111827;
+  --text-light: #f8fafc;
+  --text-dark: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased;
+  @apply bg-slate-50 text-slate-900 dark:bg-brand-navy dark:text-slate-100;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Shared reusable utility classes */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-red px-6 py-3 font-semibold text-white shadow-lg shadow-brand-red/30 transition hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 dark:focus-visible:ring-offset-brand-navy;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-slate-300 px-6 py-3 font-semibold text-slate-800 transition hover:border-brand-red hover:text-brand-red dark:border-slate-600 dark:text-slate-100 dark:hover:border-brand-red dark:hover:text-brand-red;
+}
+
+.card-surface {
+  @apply rounded-2xl bg-white shadow-card dark:bg-slate-900;
+}
+
+.input-field {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-slate-900 placeholder-slate-400 transition focus:border-brand-red focus:outline-none focus:ring-2 focus:ring-brand-red/30 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500;
+}
+
+.label-field {
+  @apply mb-1 block text-sm font-semibold text-slate-700 dark:text-slate-300;
+}
+
+.error-text {
+  @apply mt-1 text-sm font-medium text-red-600 dark:text-red-400;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* --- SPONSOR SLIDER --- */
+.sponsor-scroll-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0 1.5rem 0; 
+  scroll-snap-type: x mandatory;
+  justify-content: center; 
+}
+
+.sponsor-scroll-container:has(> :nth-child(5)) {
+  justify-content: flex-start;
+}
+
+/* Make the card taller and wider */
+.sponsor-card {
+  flex: 0 0 calc(25% - 1.5rem); /* Exactly 4 per row with gap */
+  min-width: 220px;
+  height: 160px; /* Bigger height */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.dark .sponsor-card {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
+
+.sponsor-card:hover {
+  border-color: var(--brand-red);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the logo take up most of the space */
+.sponsor-logo {
+  width: 100%;
+  height: 100px; /* Big image */
+  object-fit: contain; /* Keeps the logo proportions intact */
+  transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover .sponsor-logo {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Text style if no image is uploaded */
+.sponsor-text {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  text-align: center;
+}
+
+.dark .sponsor-text {
+  color: #94a3b8;
+}
+
+
+/* --- TEAM SLIDER --- */
+.team-scroll-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+}
+
+.team-scroll-container:has(> :nth-child(4)) {
+  justify-content: flex-start;
+}
+
+.team-scroll-container .value-card {
+  flex: 0 0 calc(33.333% - 1rem); /* 3 items per row for team */
+  min-width: 250px;
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbar for a cleaner look */
+.team-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+.team-scroll-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+.dark .team-scroll-container::-webkit-scrollbar-thumb {
+  background: #475569;
+}

@@ -1,0 +1,22 @@
+.contact-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid rgb(226 232 240);
+}
+
+.dark .contact-card {
+  background-color: rgb(15 23 42);
+  border-color: rgb(30 41 59);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 0.75rem;
+  background-color: rgba(225, 29, 44, 0.1);
+  color: var(--brand-red);
+}

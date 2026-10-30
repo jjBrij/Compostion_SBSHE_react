@@ -1,0 +1,12 @@
+/* src/styles/CompetitionDetails.css */
+
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
+/* Optional: Make the map link look cleaner */
+a[href*="maps"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}

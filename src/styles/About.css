@@ -1,0 +1,30 @@
+.about-values-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.value-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid rgb(226 232 240);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dark .value-card {
+  background-color: rgb(15 23 42);
+  border-color: rgb(30 41 59);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.25);
+}
+
+.team-photo {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+}

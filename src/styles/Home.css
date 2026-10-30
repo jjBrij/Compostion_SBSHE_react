@@ -1,0 +1,73 @@
+/* Hero section */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--brand-navy);
+  color: #ffffff;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hero-headline {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+}
+
+.hero-stat {
+  border-left: 3px solid var(--brand-red);
+  padding-left: 1rem;
+}
+
+/* Sponsor strip */
+.sponsor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  border: 1px solid rgb(226 232 240);
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgb(71 85 105);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.dark .sponsor-card {
+  background-color: rgb(15 23 42);
+  border-color: rgb(30 41 59);
+  color: rgb(148 163 184);
+}
+
+.sponsor-card:hover {
+  border-color: var(--brand-red);
+  color: var(--brand-red);
+}
+
+/* CTA band */
+.cta-band {
+  background: linear-gradient(120deg, var(--brand-red), var(--brand-orange));
+  color: #ffffff;
+  border-radius: 1.5rem;
+}
